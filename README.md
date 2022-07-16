@@ -60,8 +60,21 @@ Routers alow us to connect different _LAN_s with each other, forming a _Wide Are
 
 I.e. a Router is a device whose primary purpose is to route or move data between networks
 
-## The OSI Model
+## The OSI Model _(Open Systems Interconnection)_
 
+The OSI Model is a method of thinking of computer networking in terms of abstraction layers. Different communication protocols with similar functions are grouped into different logical layers on the OSI Model. I.e. it is a method used to comprehend how networking or how data transfering occurs in its most basic interpretation.
+
+It consists of 7 layers, explained in the following:
+
+| Data Unit       | Layer | Definition |
+| --------------- | ----- | ---------- |
+| 7. Application  | Network process to computer programs |  |
+| 6. Presentation | Data representation, security encryption, convert computer code to network formatted code |  |
+| 5. Session      | Interhost communication, managing sessions between programs |  |
+| 4. Transport    | End-to-end connections, reliability and flow control |  |
+| 3. Network      | Path determination and logical addressing | The Routing Layer works to coordinate related parts of a data conversation to ensure that large files are transferred. In other words, while the data link layer deals with the method in which the physical layer is used to transfer data, the network layer deals with organizing that data for transfer and reassembly. This layer also handles aspects of Routing Protocols using IP Addresses, and also finding the available _(best)_ path(s) from one network to another to ensure delivery of the data. |
+| 2. Data Link    | Physical addressing | The Data Layer is mainly the method in which information from the network is broken down into frames and transmitted over the physical layer. This layer is also responsible for some Error detection and correction and some addressing so different devices can tell each other apart in larger systems using MAC Addresses. |
+| 1. Physical     | The physical infrastructure used to send and receive signals | The Physical Layer refers to electrical and physical aspects of devices. In particular, it specifies how a device sends and receives information, such as using copper wires or fiber-optic cables. Examples of this include Ethernet or fiber optic cables, phone cords used for dial-up or DSL services, the coaxial cable used to provide broadband internet, the wires used to connect various components of a computer or even the radio signals used in wireless communication. Other functions of the physical layer include the conversion of signals into something that another layer can use (referred to as a bit), and adjusting the signal to allow for multiple users to use the same connections. |
 
 ## Glossary
 
@@ -77,6 +90,7 @@ I.e. a Router is a device whose primary purpose is to route or move data between
 | **Load Balncers**    | ... |
 | **IDS/IPS**          | ... |
 | **Proxies**          | ... |
+| **NAT**              | ... |
 
 ## Ressources
 
