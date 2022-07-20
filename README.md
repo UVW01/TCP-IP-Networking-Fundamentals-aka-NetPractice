@@ -47,6 +47,13 @@ Switches are like a combination of _Repeaters_ and _Bridges_, they receive a sig
 
 Hosts connected to a single Switch form a **Network**, precicely a _Local Area Network_ aka _LAN_, this has the disadvantage of not being able to send data to a Hosts that is not connected to the same _Switch_.
 
+Switches perform three actions :
+- **Learn:** Update the MAC Address Table with mapping of _Switch Port --> Source MAC_, this is usually done when a Host gets connected to the Switch after this latter was inactive
+- **Flood:** Duplicate and send the frame out all the switch ports _(except receiving port)_, this happens when the _Destination MAC Address_, present in the sent frame, isn't available in the MAC Address Table
+- **Forward:** Use MAC Address Table to deliver the Frame to the appropriate Switch Port
+
+Switches have MAC Addresses and IP Addresses themselves, the reasong for that is that you'll need to connect to them sometimes, using Telnet or SSH, in order to configure them.
+
 #### Router
 Routers alow us to connect different _LAN_s with each other, forming a _Wide Area Network_ aka a _WAN_. As a matter of fact, a Router may also connect different _WAN_s with each others.
 
@@ -100,7 +107,14 @@ _The physical infrastructure used to send and receive signals_:
 - Other functions of the physical layer include the conversion of signals into something that another layer can use (referred to as a bit), and adjusting the signal to allow for multiple users to use the same connections.
 
 ## The TCP/IP Model
+...
 
+## Data tranfer
+whenevr a Host tries to send data to another Host, a Process called **Encapsulation** occurs, which is basically addind more layers to the data that's being sent in order for it to be sent to the right destination.
+1. It starts with adding some _TCP_ data to the original _DATA_, we get something called a _Segment_
+2. After that we add some _Network_ data _(IP Addresse)_ to the previously assembeled _Segmant_, and we get something called a _Packet_
+3. And before we sed that to the Physical layer, we add some _Data link_ stuff to the previously assembeled _Packet_ in order to get what we call a _Frame_
+4. and we send that sh!? to the _Physical Layer_ which is basically just _1s_ and _0s_ going through cables or through radio waves _(in case of a Wireless network)_
 
 
 ## Glossary
@@ -117,6 +131,9 @@ _The physical infrastructure used to send and receive signals_:
 | **IDS/IPS**          | ... |
 | **Proxies**          | ... |
 | **NAT**              | ... |
+| **Classless**        | ... |
+| **TCP/UDP**          | ... |
+| **NIC**              | ... |
 
 ## Ressources
 
